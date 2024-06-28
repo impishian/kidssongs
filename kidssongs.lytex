@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+% xelatex -shell-escape -interaction=nonstopmode main.tex
+
+\usepackage{ctex}
+\usepackage[a4paper, left = 1cm, right = 1cm, top = 3cm, bottom = 3cm]{geometry}
+\usepackage{xcolor}
+
+%\setmainfont{Source Serif Pro}
+%\setsansfont{Source Sans Pro}
+%\setmonofont{Source Code Pro}
+
+\setCJKmainfont{Source Han Serif SC} 
+\setCJKsansfont{Source Han Sans SC}
+\setCJKmonofont{Source Han Sans SC}
+\renewcommand{\songti}{\CJKfontspec{Source Han Serif SC}}
+\renewcommand{\heiti}{\CJKfontspec{Source Han Sans SC}}
+\newcommand{\cusong}{\CJKfontspec{Source Han Serif SC Bold}}
+
+\newcommand \hs {\hspace{2pt}}
+\newcommand \vs {\vspace{5pt}}
+
+\begin{document}
+\centering
+%\section{生日快乐}
+
+\lilypondfile[quote,noindent]{happy_birthday.ly}
+\vs
+\lilypondfile[quote,noindent]{xiaocao.ly}
+\vs
+
+\lilypondfile[quote,noindent]{letters.ly}
+\vs
+
+\lilypondfile[quote,noindent]{shuyazi.ly}
+\vs
+
+\lilypondfile[quote,noindent]{two-tigers.ly}
+\vs
+
+\lilypondfile[quote,noindent]{fenshuajiang.ly}
+\vs
+
+\lilypondfile[quote,noindent]{twinkle3.ly}
+\vs
+
+%\section{第三}
+
+\lilypondfile[quote,noindent]{xiaohongmao.ly}
+\vs
+
+\end{document}
