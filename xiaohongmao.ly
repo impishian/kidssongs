@@ -9,6 +9,7 @@
   tagline = ##f
 }
 
+% a5
 \paper {
   #(set-paper-size "a5")
   %top-margin = 20
@@ -26,10 +27,10 @@ sk = \skip 4
 text = \lyricmode  {
 我 独 自 走 在 郊 外 的 小 路 上
 我 把 糕 点 带 给 外 婆 尝 一 尝
-她 家 住 在 悠 远 又 僻 静 的 地 方
+她 家 住 在 又 远 又 僻 静 的 地 方
 我 要 当 心 附 近 是 否 有 大 灰 狼
 当 太 阳 下 山 岗 我 要 赶 回 家
-同 妈 妈 一 起 进 入 甜 蜜 梦 乡
+和 妈 妈 一 同 进 入 甜 蜜 梦 乡
 }
 
 upper = \relative c {
@@ -54,7 +55,7 @@ c'2 | %{ bar 2: %} e'2 | %{ bar 3: %} f'2 | %{ bar 4: %} e'2 | %{ bar 5: %} c'2 
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
       \new Voice = "upper" \upper
-      \new Lyrics = "IX" \lyricsto "upper"   \text
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

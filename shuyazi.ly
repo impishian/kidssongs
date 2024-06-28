@@ -9,6 +9,7 @@
   tagline = ##f
 }
 
+% a5
 \paper {
   #(set-paper-size "a5")
   %top-margin = 20
@@ -24,7 +25,7 @@ sk = \skip 4
 }
 
 text = \lyricmode  {
-\sk \sk \sk \sk \sk \sk \sk \sk 门 前 大桥 下 游过 一群 鸭 \sk 快来 快来 数一 数 二四 六七 八 \sk 嘎 嘎 嘎 嘎 真呀 真多 呀 \sk 数 不清 到 底 多 少 鸭 \sk 数 不清 到 底 多 少 鸭
+\sk \sk \sk \sk \sk \sk \sk \sk \sk \sk \sk \sk \sk 门 前 大 桥 下 游 过 一 群 鸭 快 来 快 来 数 一 数 二 四 六 七 八 嘎 嘎 嘎 嘎 真 呀 真 多 呀  数 不 清 到 底 多 \sk 少 \sk 鸭 数 不 清 到 底 多 \sk 少 \sk 鸭
 }
 
 upper = \relative c {
@@ -48,9 +49,8 @@ c'8 g'8 e'8 g'8 c'8 g'8 e'8 g'8 | %{ bar 2: %} c'8 g'8 e'8 g'8 c'8 g'8 e'8 g'8 |
 \score {
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      %\new Lyrics \text
-      \new Lyrics = "IX" { \text }
+      \new Voice = "upper" \upper
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

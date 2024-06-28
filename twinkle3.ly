@@ -9,8 +9,9 @@
   tagline = ##f
 }
 
+% a6
 \paper {
-  #(set-paper-size "a6")
+  #(set-paper-size "a5")
   %top-margin = 20
   %bottom-margin = 20
   %left-margin = 20
@@ -24,7 +25,7 @@ sk = \skip 4
 }
 
 text = \lyricmode  {
-一 闪 一 闪 亮 晶 晶 \sk 满 天 都 是 小 星 星 \sk 挂 在 天 空 放 光 明 \sk 就 像 许 多 小 眼 睛 \sk 一 闪 一 闪 亮 晶 晶 \sk 满 天 都 是 小 星 星
+一 闪 一 闪 亮 晶 晶 满 天 都 是 小 星 星 挂 在 天 空 放 光 明 就 像 许 多 小 眼 睛 一 闪 一 闪 亮 晶 晶 满 天 都 是 小 星 星
 }
 
 upper = \relative c {
@@ -53,9 +54,8 @@ lower = \relative c {
 \score {
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      %\new Lyrics \text
-      \new Lyrics = "IX" { \text }
+      \new Voice = "upper" \upper
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

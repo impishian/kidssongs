@@ -9,8 +9,9 @@
   tagline = ##f
 }
 
+% a6
 \paper {
-  #(set-paper-size "a6")
+  #(set-paper-size "a5")
   %top-margin = 20
   %bottom-margin = 20
   %left-margin = 20
@@ -24,7 +25,7 @@ sk = \skip 4
 }
 
 text = \lyricmode  {
-两 只 老 虎 两 只 老 虎 跑 得 快 \sk 跑 得 快 \sk 一只 没有 眼 睛 一只 没有 尾 巴 真 奇 怪 \sk 真 奇 怪 \sk
+两 只 老 虎 两 只 老 虎 跑 得 快 跑 得 快 一 只 没 有 眼 睛 一 只 没 有 尾 巴 真 奇 怪 真 奇 怪
 }
 
 upper = \relative c {
@@ -49,9 +50,8 @@ lower = \relative c {
 \score {
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      %\new Lyrics \text
-      \new Lyrics = "IX" { \text }
+      \new Voice = "upper" \upper
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

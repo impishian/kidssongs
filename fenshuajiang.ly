@@ -9,6 +9,7 @@
   tagline = ##f
 }
 
+% a5
 \paper {
   #(set-paper-size "a5")
   %top-margin = 20
@@ -24,7 +25,7 @@ sk = \skip 4
 }
 
 text = \lyricmode  {
-我 是 一 个 粉 刷 匠 \sk 粉 刷 本 领 强 \sk \sk \sk 我 要 把 那 新 房 子 \sk 刷 得 很 漂 亮 \sk \sk \sk 刷 了 房 顶 又 刷 墙 \sk 刷 子 象飞 一 样 \sk \sk \sk 哎 呀 我 的 小 鼻 子 \sk 变 呀 变 了 样 \sk \sk \sk
+我 是 一 个 粉 刷 匠 粉 刷 本 领 强 我 要 把 那 新 房 子 刷 得 很 漂 亮  刷 了 房 顶 又 刷 墙 刷 子 象飞 一 样 哎 呀 我 的 小 鼻 子 变 呀 变 了 样
 }
 
 upper = \relative c {
@@ -48,9 +49,8 @@ lower = \relative c {
 \score {
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      %\new Lyrics \text
-      \new Lyrics = "IX" { \text }
+      \new Voice = "upper" \upper
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

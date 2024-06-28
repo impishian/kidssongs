@@ -9,6 +9,7 @@
   tagline = ##f
 }
 
+% a5
 \paper {
   #(set-paper-size "a5")
   %top-margin = 20
@@ -24,9 +25,9 @@ sk = \skip 4
 }
 
 text = \lyricmode  {
-A B C D E F G \sk H I J K L M N \sk
-O P Q \sk R S T \sk U V W \sk X Y Z \sk
-Now I Know My A B Cs \sk Next Time Won't You Sing With Me
+A B C D E F G H I J K L M N
+O P Q \sk R S T U V W \sk X Y Z
+Now I Know My A B Cs Next Time Won't You Sing With Me
 }
 
 upper = \relative c {
@@ -50,9 +51,8 @@ c'8 g'8 e'8 g'8 c'8 g'8 e'8 g'8 | %{ bar 2: %} c'8 a'8 f'8 a'8 c'8 g'8 e'8 g'8 |
 \score {
     %\new Voice = "mel" { \autoBeamOff \melody }
     \new PianoStaff <<
-      \new Staff = "upper" \upper
-      %\new Lyrics \text
-      \new Lyrics = "IX" { \text }
+      \new Voice = "upper" \upper
+      \new Lyrics = "IX" \lyricsto "upper" \text
       \new Staff = "lower" \lower
     >>
   \layout {

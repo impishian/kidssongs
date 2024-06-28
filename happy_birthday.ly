@@ -8,8 +8,9 @@
   tagline = ##f
 }
 
+%a4
 \paper {
-  #(set-paper-size "a4")
+  #(set-paper-size "a5")
   top-margin = 20
   bottom-margin = 20
   left-margin = 20
